@@ -7,7 +7,7 @@ include(FetchContent)
 # Option 1: Fetch localization library from GitHub
 # FetchContent_Declare(
 #     localization
-#     GIT_REPOSITORY https://github.com/your-username/whitepoint-localization-universal-cpp.git
+#     GIT_REPOSITORY https://github.com/WhitePoint-India/whitepoint-localization-universal-cpp.git
 #     GIT_TAG main # or specify a specific tag/commit
 # )
 
