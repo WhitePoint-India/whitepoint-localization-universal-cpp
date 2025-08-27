@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.11)
-project(MyApplication VERSION 1.0.0 LANGUAGES CXX)
+project(Example VERSION 1.0.0 LANGUAGES CXX)
 
 # Include FetchContent module
 include(FetchContent)
