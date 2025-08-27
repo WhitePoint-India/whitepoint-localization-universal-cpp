@@ -1,6 +1,6 @@
-#include "locale.h"
 #include <fstream>
 #include <iostream>
+#include <localization/locale.h>
 
 Locale::Locale(const nlohmann::json json): json(json) {
 

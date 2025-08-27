@@ -1,5 +1,6 @@
 # Localization library CMakeLists.txt
 cmake_minimum_required(VERSION 3.11)
+project(localization VERSION 1.0.0 LANGUAGES CXX)
 
 # Include FetchContent module
 include(FetchContent)
@@ -13,14 +14,20 @@ FetchContent_MakeAvailable(json)
 
 # Create localization library
 add_library(localization STATIC
-    localization.cpp
-    locale.cpp
+    src/localization.cpp
+    src/locale.cpp
 )
 
 # Set include directories for this library
+# BUILD_INTERFACE: Used when building the library
+# INSTALL_INTERFACE: Used when the library is installed
 target_include_directories(localization PUBLIC
-    ${CMAKE_CURRENT_SOURCE_DIR}/..
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+    $<INSTALL_INTERFACE:include>
 )
 
 # Link nlohmann_json to localization
 target_link_libraries(localization PUBLIC nlohmann_json::nlohmann_json)
+
+# Set C++ standard (requires C++20 for std::format)
+target_compile_features(localization PUBLIC cxx_std_20)

@@ -6,7 +6,7 @@
 #define LOCALIZATION_H
 
 #include <iostream>
-#include "locale.h"
+#include <localization/locale.h>
 
 template<typename... Args>
 void printLocalizedString(std::string key, Args... args);

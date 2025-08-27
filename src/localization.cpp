@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <iostream>
 #include <string>
-#include "localization.h"
+#include <localization/localization.h>
 
 Localization* Localization::defaultLocalization = NULL;
 

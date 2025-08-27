@@ -1,0 +1,6 @@
+{
+    "welcome_message": "Welcome to the application!",
+    "greeting": "Hello, %s!",
+    "error_message": "An error occurred: %s",
+    "success_message": "Operation completed successfully"
+}
